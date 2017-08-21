@@ -1,0 +1,24 @@
+{
+  "Transform": "AWS::Serverless-2016-10-31",
+  "Description": "v.1.0.0 Serverless function (Lambda + Api gateway)",
+  "Resources": {
+    "LambdaPipelineFunction": {
+      "Type": "AWS::Serverless::Function",
+      "Properties": {
+        "Runtime": "nodejs6.10",
+        "CodeUri": "build",
+        "Handler": "index.handler",
+        "Description": "Lambda pipeline function",
+        "Events": {
+          "GetResource": {
+            "Type": "Api",
+            "Properties": {
+              "Path": "/lambda-pipeline",
+              "Method": "get"
+            }
+          }
+        }
+      }
+    }
+  }
+}

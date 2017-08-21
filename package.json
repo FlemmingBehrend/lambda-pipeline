@@ -1,0 +1,40 @@
+{
+  "name": "lambda-pipeline",
+  "version": "1.0.0",
+  "description": "Blueprint for creating a lambda function with CI/CD",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "test": "jasmine-node src/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.topdanmark.local:Cloud9/lambda-pipeline.git"
+  },
+  "keywords": [
+    "lambda",
+    "CD",
+    "CI",
+    "pipeline"
+  ],
+  "publishConfig": {
+    "registry": "http://artifactory.topdanmark.local/artifactory/api/npm/npm-local"
+  },
+  "author": "Flemming Behrend",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.4"
+  },
+  "devDependencies": {
+    "@types/jasmine": "^2.5.53",
+    "@types/lodash": "^4.14.70",
+    "@types/node": "^8.0.14",
+    "generate-json-webpack-plugin": "^0.2.1",
+    "jasmine": "^2.6.0",
+    "jasmine-node": "^1.14.5",
+    "json-loader": "^0.5.4",
+    "uglifyjs-webpack-plugin": "^1.0.0-beta.1",
+    "webpack": "^3.3.0",
+    "zip-webpack-plugin": "^2.0.0"
+  }
+}
